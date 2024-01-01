@@ -154,10 +154,11 @@ logo=("""\033[1;91m
    \033[1;91m##   ##     ##     ##    ##     ##    ##   ###     ##  
    \033[0;37m##    ##    ##     ##    ##     ##    ##    ##    #### 
 \033[1;37m----------------------------------------------------------->>
-[~] Author   : Khani noori
-[~] Facebook : sami khan
-[~] Tool     : Paid
-[~] Version  : 0.1
+ Author   : Khani noori
+ Github   : https://github.com/KHANI-NOORI
+ Facebook : sami khan
+ Tool     : Paid
+ Version  : 0.1
 \033[1;37m----------------------------------------------""")
 def linex():
 	print('\033[1;37m----------------------------------------------')
