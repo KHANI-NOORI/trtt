@@ -1,4 +1,5 @@
-        import os,requests,json,time,re,random,sys,uuid,string,subprocess
+try:
+	import os,requests,json,time,re,random,sys,uuid,string,subprocess
 	from string import *
 	import bs4
 	#import dz
