@@ -1,10 +1,10 @@
 import os,requests,json,time,re,random,sys,uuid,string,subprocess
-	from string import *
-	import bs4
-	#import dz
-	from concurrent.futures import ThreadPoolExecutor as tred
-	from bs4 import BeautifulSoup as sop
-	from bs4 import BeautifulSoup
+from string import *
+import bs4
+#import dz
+from concurrent.futures import ThreadPoolExecutor as tred
+from bs4 import BeautifulSoup as sop
+from bs4 import BeautifulSoup
 except ModuleNotFoundError: 
 	print('\n Installing missing modules ...')
 	os.system('pip install requests bs4 futures==2 > /dev/null')
